@@ -1,0 +1,161 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# User Data
+user_data/
+screenshots/
+recordings/
+
+# Output Files
+workflow_log.txt
+*.txt.backup
+debug_report_*.json
+
+# Configuration (if contains sensitive data)
+config/api_keys.yaml
+
+# Windows specific
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.cache
+.cache/
+
+# Test coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.env.local
+.env.*.local
+
+# Spyder
+.spyderproject
+.spyproject
+
+# Rope
+.ropeproject
+
+# mkdocs
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Compiled binaries
+*.exe
+*.out
+*.app
+
+# OS generated
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trash
+.AppleDouble
+.LSOverride
+
+# Project specific
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mov
+*.mp4
+*.avi
+*.wav
+*.mp3
+!docs/**/*.png
+!docs/**/*.jpg
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Backup files
+*.backup
+*.old

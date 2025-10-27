@@ -1,0 +1,185 @@
+# AGE Agent Configuration File
+# This file contains all configurable settings for the AGE Agent application
+
+# Recording Configuration
+recording:
+  # Maximum recording duration in minutes
+  max_duration_minutes: 60
+  
+  # Video recording settings
+  fps: 1
+  max_frames: 10000
+  max_screenshots: 1000
+  
+  # Audio recording settings
+  audio_sample_rate: 16000
+  audio_channels: 1
+  audio_chunk_size: 1024
+  audio_format: "int16"
+  
+  # Capture intervals
+  screenshot_interval_seconds: 5
+  chunk_duration_minutes: 1
+  
+  # Quality settings
+  video_quality: "medium"  # low, medium, high
+  audio_quality: "medium"  # low, medium, high
+  
+  # Compression settings
+  enable_compression: true
+  compression_level: 6  # 1-9, higher = better compression, slower processing
+
+# Storage Configuration
+storage:
+  # Directory paths
+  local_path: "./user_data"
+  temp_path: "./user_data/temp"
+  recordings_path: "./user_data/recordings"
+  processed_path: "./user_data/processed"
+  logs_path: "./user_data/logs"
+  cache_path: "./user_data/cache"
+  
+  # Storage management
+  auto_delete_raw: true
+  auto_delete_temp: true
+  max_storage_gb: 5
+  cleanup_interval_hours: 24
+  
+  # File naming
+  timestamp_format: "%Y%m%d_%H%M%S"
+  filename_prefix: "age_session"
+  
+  # Backup settings
+  enable_backup: false
+  backup_path: "./user_data/backup"
+  backup_retention_days: 30
+
+# LLM Configuration
+llm:
+  # Provider settings
+  provider: "gemini"  # gemini, openai, local
+  model: "gemini-2.0-flash-exp"
+  
+  # API settings
+  temperature: 0.3
+  max_tokens: 2000
+  timeout_seconds: 30
+  
+  # Rate limiting
+  requests_per_minute: 60
+  requests_per_hour: 1000
+  
+  # Retry settings
+  max_retries: 3
+  retry_delay_seconds: 1
+  exponential_backoff: true
+  
+  # Prompt settings
+  system_prompt: "You are an AI assistant that analyzes computer user workflows to identify automation opportunities."
+  max_context_length: 4000
+
+# Processing Configuration
+processing:
+  # Worker settings
+  max_workers: 4
+  timeout_seconds: 300
+  
+  # Frame processing
+  frame_resize_width: 1280
+  frame_resize_height: 720
+  frame_quality: 85  # JPEG quality 1-100
+  
+  # Analysis settings
+  enable_frame_analysis: true
+  enable_audio_transcription: true
+  enable_workflow_detection: true
+  
+  # Performance settings
+  use_gpu: false  # Enable GPU acceleration if available
+  memory_limit_mb: 1024
+  cpu_limit_percent: 80
+
+# UI Configuration
+ui:
+  # Window settings
+  window_width: 1000
+  window_height: 700
+  window_resizable: true
+  
+  # Theme settings
+  theme: "light"  # light, dark, auto
+  font_family: "Arial"
+  font_size: 12
+  
+  # Display settings
+  show_system_tray: true
+  minimize_to_tray: true
+  always_on_top: false
+  
+  # Logging settings
+  log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  max_log_lines: 1000
+  auto_scroll_log: true
+
+# Security Configuration
+security:
+  # Data protection
+  encrypt_sensitive_data: false
+  encryption_key_file: "./user_data/.encryption_key"
+  
+  # Privacy settings
+  anonymize_screenshots: false
+  blur_sensitive_content: false
+  exclude_private_windows: true
+  
+  # API security
+  validate_api_keys: true
+  secure_api_calls: true
+
+# Performance Configuration
+performance:
+  # Resource monitoring
+  monitor_cpu_usage: true
+  monitor_memory_usage: true
+  monitor_disk_usage: true
+  
+  # Optimization settings
+  enable_caching: true
+  cache_size_mb: 100
+  preload_models: false
+  
+  # Background processing
+  background_processing: true
+  low_priority_mode: false
+
+# Debug Configuration
+debug:
+  # Debug settings
+  enable_debug_mode: false
+  verbose_logging: false
+  save_debug_files: false
+  
+  # Testing settings
+  enable_mock_data: false
+  simulate_errors: false
+  
+  # Performance profiling
+  enable_profiling: false
+  profile_output_path: "./user_data/profiles"
+
+# Notifications Configuration
+notifications:
+  # Notification settings
+  enable_notifications: true
+  notification_sound: true
+  
+  # Notification types
+  notify_recording_start: true
+  notify_recording_stop: true
+  notify_processing_complete: true
+  notify_errors: true
+  
+  # Notification methods
+  desktop_notifications: true
+  system_tray_notifications: true
+  log_notifications: true
